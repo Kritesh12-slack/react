@@ -20,12 +20,26 @@ export default function Footer() {
                             <h2 className="mb-6 text-sm font-semibold text-gray-900 uppercase">Resources</h2>
                             <ul className="text-gray-500 font-medium">
                                 <li className="mb-4">
-                                    <NavLink to="/" className={`${location.pathname === "/" ? "text-orange-700" : "text-blue-500"}hover:underline`}>
+                                    <NavLink 
+                                        to="/" 
+                                        // className={`${location.pathname === "/" ? "text-orange-700" : "text-blue-500"}hover:underline`}
+                                        className={({isActive}) =>
+                                        `${isActive ? "text-orange-700" : "text-gray-700"}
+                                        block py-2 pr-4 pl-3 duration-200 border-b border-gray-100 hover:bg-gray-50 lg:hover:bg-transparent lg:border-0 hover:text-orange-700 lg:p-0`
+                                    }
+                                    >
                                         Home
                                     </NavLink>
                                 </li>
                                 <li>
-                                    <NavLink to="/about" className={`${location.pathname === "/about" ? "text-orange-700" : "text-blue-500"}hover:underline`}>
+                                    <NavLink 
+                                        to="/about" 
+                                        // className={`${location.pathname === "/about" ? "text-orange-700" : "text-blue-500"}hover:underline`}
+                                        className={({isActive}) =>
+                                        `${isActive ? "text-orange-700" : "text-gray-700"}
+                                        block py-2 pr-4 pl-3 duration-200 border-b border-gray-100 hover:bg-gray-50 lg:hover:bg-transparent lg:border-0 hover:text-orange-700 lg:p-0`
+                                }
+                                    >
                                         About
                                     </NavLink>
                                 </li>
