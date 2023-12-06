@@ -10,7 +10,7 @@ export default function TodoForm() {
 
     const add = (e) => {
         e.preventDefault();
-        addTodo({todo,completed:false});
+        addTodo(todo);
         setTodo("");
     }
 
