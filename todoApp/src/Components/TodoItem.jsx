@@ -14,7 +14,6 @@ function TodoItem({ todo }) {
 
     const toggleComplete = () =>{
         toggleCompleted(todo.id)
-        setIsTodoEditable(prev)
     }
 
     return (
